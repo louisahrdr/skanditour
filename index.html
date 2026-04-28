@@ -1,0 +1,1155 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Skandinavien-Camper 2026 · Louisa & Oliver</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          cream: '#faf7f2',
+          ink: '#1a2332',
+          fjord: '#2c5f5d',
+          fjordDark: '#1d4644',
+          sunset: '#e87a3e',
+          moss: '#7a8a5a',
+          paper: '#fffdf9',
+          dust: '#ece6da',
+        },
+        fontFamily: {
+          serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+          sans: ['Inter', 'system-ui', 'sans-serif'],
+        }
+      }
+    }
+  }
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+  body { background: #faf7f2; color: #1a2332; font-family: 'Inter', system-ui, sans-serif; }
+  h1, h2, h3, .serif { font-family: 'Cormorant Garamond', Georgia, serif; letter-spacing: -0.01em; }
+  .nav-link { transition: color .2s, border-color .2s; border-bottom: 2px solid transparent; }
+  .nav-link:hover { color: #2c5f5d; border-color: #e87a3e; }
+  .nav-link.active { color: #2c5f5d; border-color: #2c5f5d; }
+  .card { background: #fffdf9; border: 1px solid #ece6da; border-radius: 14px; }
+  .chip { display:inline-block; padding:2px 10px; border-radius:9999px; font-size:.72rem; letter-spacing:.04em; text-transform:uppercase; font-weight:500; }
+  .chip-fjord { background:#dde7e6; color:#1d4644; }
+  .chip-sunset { background:#fbe2cf; color:#9d4416; }
+  .chip-moss { background:#e3e8d5; color:#4f5d35; }
+  .chip-ink { background:#dfe3eb; color:#1a2332; }
+  .day-num { font-family: 'Cormorant Garamond', serif; font-weight: 700; }
+  .check-list label { cursor:pointer; user-select:none; display:flex; align-items:flex-start; gap:.6rem; padding:.35rem .25rem; border-radius:6px; }
+  .check-list label:hover { background:#f3eee3; }
+  .check-list input[type=checkbox] { margin-top:.32rem; accent-color:#2c5f5d; flex-shrink:0; }
+  .check-list input[type=checkbox]:checked + span { text-decoration: line-through; color:#8a8472; }
+  details > summary { list-style: none; cursor: pointer; }
+  details > summary::-webkit-details-marker { display: none; }
+  details[open] .chev { transform: rotate(180deg); }
+  .chev { transition: transform .2s; }
+  .timeline { position: relative; }
+  .timeline::before { content:''; position:absolute; left:14px; top:8px; bottom:8px; width:2px; background:linear-gradient(to bottom, #2c5f5d, #e87a3e); border-radius:2px; }
+  .timeline > li { position: relative; padding-left: 44px; padding-bottom: 18px; }
+  .timeline > li::before { content:''; position:absolute; left:8px; top:6px; width:14px; height:14px; border-radius:50%; background:#fffdf9; border:3px solid #2c5f5d; }
+  .grad-hero { background:
+    radial-gradient(1200px 400px at 80% -10%, rgba(232,122,62,.18), transparent 70%),
+    radial-gradient(900px 600px at 0% 30%, rgba(44,95,93,.18), transparent 70%),
+    linear-gradient(180deg, #faf7f2 0%, #f3ede0 100%);
+  }
+  .scandi-divider { height: 32px; background-image: radial-gradient(circle at 8px 16px, #c9bfa8 2px, transparent 3px); background-size: 16px 32px; opacity: .55; }
+  @media print {
+    .no-print { display:none !important; }
+    body { background:#fff; }
+    section { break-inside: avoid; }
+  }
+  .pill-link { display:inline-flex; align-items:center; gap:.4rem; padding:6px 12px; border-radius:9999px; background:#dde7e6; color:#1d4644; font-size:.85rem; transition: background .15s; }
+  .pill-link:hover { background:#c9d8d6; }
+  .stat { background:#fffdf9; border-radius:12px; padding:14px 18px; border:1px solid #ece6da; }
+  .progress-track { height: 8px; background: #ece6da; border-radius: 999px; overflow: hidden; }
+  .progress-fill { height: 100%; background: linear-gradient(90deg, #2c5f5d, #e87a3e); transition: width .4s; }
+</style>
+</head>
+<body class="antialiased">
+
+<!-- ============== NAV ============== -->
+<header class="no-print sticky top-0 z-50 backdrop-blur bg-cream/85 border-b border-dust">
+  <nav class="max-w-6xl mx-auto px-5 py-3 flex flex-wrap items-center gap-x-6 gap-y-2">
+    <a href="#top" class="font-serif text-xl font-semibold text-fjordDark">Skandinavien · Mai 2026</a>
+    <div class="flex flex-wrap gap-x-5 gap-y-1 text-sm ml-auto">
+      <a class="nav-link" href="#uebersicht">Übersicht</a>
+      <a class="nav-link" href="#route">Route</a>
+      <a class="nav-link" href="#tagesplan">Tagesplan</a>
+      <a class="nav-link" href="#packliste">Packliste</a>
+      <a class="nav-link" href="#camping">Camping</a>
+      <a class="nav-link" href="#staedte">Städte & Essen</a>
+      <a class="nav-link" href="#tipps">Tipps</a>
+      <a class="nav-link" href="#wetter">Wetter</a>
+      <a class="nav-link" href="#checklisten">Check-In/Out</a>
+    </div>
+  </nav>
+</header>
+
+<!-- ============== HERO ============== -->
+<section id="top" class="grad-hero">
+  <div class="max-w-6xl mx-auto px-5 pt-14 pb-12">
+    <p class="uppercase tracking-[0.25em] text-xs text-fjord mb-4">Eine Reise mit dem VW Bus</p>
+    <h1 class="text-5xl md:text-7xl font-semibold leading-[1.05] text-ink max-w-4xl">
+      17 Nächte zwischen <span class="text-fjord">Fjord</span>, Wald
+      <br/>und <span class="text-sunset">Mitternachtssonne</span>.
+    </h1>
+    <p class="mt-6 text-lg text-ink/80 max-w-2xl">
+      Louisa &amp; Oliver · 13.05.&nbsp;–&nbsp;30.05.2026 · ab/an Duisburg ·
+      Roadsurfer&nbsp;VW&nbsp;T6.1
+    </p>
+
+    <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-3 max-w-3xl">
+      <div class="stat">
+        <div class="text-xs uppercase tracking-wider text-ink/60">Abholung</div>
+        <div class="font-serif text-xl">Mi 13.05. · 17:00</div>
+        <div class="text-xs text-ink/60 mt-1">Forststr. 36, Duisburg</div>
+      </div>
+      <div class="stat">
+        <div class="text-xs uppercase tracking-wider text-ink/60">Rückgabe</div>
+        <div class="font-serif text-xl">Sa 30.05. · 17:00</div>
+        <div class="text-xs text-ink/60 mt-1">selbe Station</div>
+      </div>
+      <div class="stat">
+        <div class="text-xs uppercase tracking-wider text-ink/60">Nächte</div>
+        <div class="font-serif text-xl">17</div>
+        <div class="text-xs text-ink/60 mt-1">davon 1 in DE / 16 unterwegs</div>
+      </div>
+      <div class="stat">
+        <div class="text-xs uppercase tracking-wider text-ink/60">Distanz</div>
+        <div class="font-serif text-xl">~ 4 800&nbsp;km</div>
+        <div class="text-xs text-ink/60 mt-1">empfohlene Route</div>
+      </div>
+    </div>
+
+    <div class="mt-6 flex flex-wrap gap-2 no-print">
+      <a href="#tagesplan" class="pill-link">→ Tagesplan ansehen</a>
+      <a href="#packliste" class="pill-link">→ Packliste</a>
+      <a href="#checklisten" class="pill-link">→ Pre-Trip Checkliste</a>
+      <a href="javascript:window.print()" class="pill-link">⎙ Drucken / als PDF</a>
+    </div>
+  </div>
+</section>
+
+<div class="scandi-divider"></div>
+
+<!-- ============== ÜBERSICHT ============== -->
+<section id="uebersicht" class="max-w-6xl mx-auto px-5 py-14">
+  <h2 class="text-4xl md:text-5xl font-semibold text-fjordDark">Übersicht</h2>
+  <p class="mt-3 text-ink/70 max-w-3xl">
+    Drei Länder, eine Schleife. Wir starten klassisch über Dänemark, fahren
+    Schwedens Westküste hoch, machen Norwegens Fjorde zum Herzstück und kommen
+    per Fähre Kristiansand→Hirtshals nach Dänemark zurück. Genug Zeit für Städte
+    (Kopenhagen, Göteborg, Oslo, Bergen, Stavanger), genug Zeit zum Wandern, und
+    immer Plan B falls das Wetter zickt.
+  </p>
+
+  <div class="mt-10 grid md:grid-cols-3 gap-4">
+    <div class="card p-6">
+      <div class="chip chip-fjord">Highlight 1</div>
+      <h3 class="text-2xl mt-3">Hardangerfjord &amp; Bergen</h3>
+      <p class="text-sm text-ink/70 mt-2">Wasserfälle entlang der Rv13, Trolltunga-Region und das UNESCO-Holzviertel Bryggen. Bergen ist europäisch-charmant — auch im Regen.</p>
+    </div>
+    <div class="card p-6">
+      <div class="chip chip-sunset">Highlight 2</div>
+      <h3 class="text-2xl mt-3">Preikestolen / Lysefjord</h3>
+      <p class="text-sm text-ink/70 mt-2">Eine der ikonischsten Wanderungen Norwegens — 8&nbsp;km, 4&nbsp;Stunden, 600&nbsp;Höhenmeter. Frühmorgens los für menschenleere Aussicht.</p>
+    </div>
+    <div class="card p-6">
+      <div class="chip chip-moss">Highlight 3</div>
+      <h3 class="text-2xl mt-3">Kopenhagen → Göteborg</h3>
+      <p class="text-sm text-ink/70 mt-2">Reffen-Streetfood, Kanalradeln, Schären-Inseln, Kanelbullar in Haga. Der entspannte Skandi-Vibes-Auftakt.</p>
+    </div>
+  </div>
+
+  <div class="mt-10 card p-6 md:p-8">
+    <h3 class="text-2xl text-fjordDark">Tempo &amp; Logik der Route</h3>
+    <ul class="mt-4 space-y-2 text-sm text-ink/80 list-disc pl-6">
+      <li><b>Anreise gestaffelt</b> — am 13.&nbsp;abends nur kurz Krefeld→Hüls beladen und bis Lübeck/Hamburg fahren spart einen langen Tag am Donnerstag.</li>
+      <li><b>Im Norden langsam</b> — Bergen, Hardangerfjord und Stavanger bekommen je 1–2 volle Tage, ohne hektisches Weiterziehen.</li>
+      <li><b>Rückweg per Fähre</b> — Kristiansand→Hirtshals (Color&nbsp;Line, ca.&nbsp;3:15&nbsp;h) spart vs.&nbsp;1500&nbsp;km Landweg über Schweden.</li>
+      <li><b>Puffer am Ende</b> — Übernachtung Hamburg-Region am 29., damit der 30. (Camper leer&nbsp;+&nbsp;Rückgabe&nbsp;17:00) entspannt bleibt.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============== ROUTE ============== -->
+<section id="route" class="bg-paper border-y border-dust">
+<div class="max-w-6xl mx-auto px-5 py-14">
+  <h2 class="text-4xl md:text-5xl font-semibold text-fjordDark">Drei Routen-Optionen</h2>
+  <p class="mt-3 text-ink/70 max-w-3xl">
+    Die <b>empfohlene Route</b> ist Variante&nbsp;A. B und C sind Alternativen,
+    falls ihr lieber Berge statt Städte oder Städte statt Berge wollt.
+  </p>
+
+  <div class="mt-8 grid md:grid-cols-3 gap-4">
+
+    <article class="card p-6 border-2 border-fjord">
+      <div class="flex items-center gap-2">
+        <span class="chip chip-fjord">Empfohlen</span>
+        <span class="chip chip-ink">Variante A</span>
+      </div>
+      <h3 class="text-2xl mt-3">Süd-Skandi-Schleife</h3>
+      <p class="text-sm text-ink/60">≈ 4 800&nbsp;km · 17 Nächte · 3 Länder</p>
+      <p class="text-sm mt-3 text-ink/80">DK&nbsp;→&nbsp;SE-Westküste&nbsp;→&nbsp;Süd-Norwegen (Oslo, Hardangerfjord, Bergen, Stavanger) → Fähre&nbsp;DK → Heim.</p>
+      <ul class="mt-3 text-sm space-y-1 text-ink/75 list-disc pl-5">
+        <li>Beste Mischung Stadt + Fjord + Wandern</li>
+        <li>Fähre Puttgarden &amp; Kristiansand–Hirtshals</li>
+        <li>Pässe Hardangervidda offen (i.d.R. ab Anfang Mai)</li>
+      </ul>
+    </article>
+
+    <article class="card p-6">
+      <span class="chip chip-sunset">Variante B</span>
+      <h3 class="text-2xl mt-3">Fjord-Tief</h3>
+      <p class="text-sm text-ink/60">≈ 5 400&nbsp;km · 17 Nächte · Fokus Norwegen</p>
+      <p class="text-sm mt-3 text-ink/80">Fähre&nbsp;Kiel→Oslo → Geirangerfjord, Trollstigen, Atlantikstraße, Sognefjord → Bergen → Stavanger → Fähre Hirtshals.</p>
+      <ul class="mt-3 text-sm space-y-1 text-ink/75 list-disc pl-5">
+        <li>Mehr Norwegen, kaum DK/SE</li>
+        <li>Fähre Kiel→Oslo (Color Line, 19h, Kabine ~280–450€)</li>
+        <li>Risiko: Trollstigen evtl. Mitte Mai noch zu</li>
+      </ul>
+    </article>
+
+    <article class="card p-6">
+      <span class="chip chip-moss">Variante C</span>
+      <h3 class="text-2xl mt-3">Slow &amp; Schären</h3>
+      <p class="text-sm text-ink/60">≈ 3 400&nbsp;km · 17 Nächte · entspannt</p>
+      <p class="text-sm mt-3 text-ink/80">Kopenhagen → Møn → Skåne → Göteborg → Bohuslän → Oslo → Telemark-Kanal → Aarhus → Heim.</p>
+      <ul class="mt-3 text-sm space-y-1 text-ink/75 list-disc pl-5">
+        <li>Wenig fahren, viel an einem Ort sein</li>
+        <li>Kein Hochgebirge, weniger Wetterrisiko</li>
+        <li>Fjorde fehlen — dafür Sauna-Kultur, Inselhopping, Wälder</li>
+      </ul>
+    </article>
+
+  </div>
+
+  <p class="mt-6 text-sm text-ink/60 italic max-w-3xl">
+    Hinweis Schneeketten/Pässe: Hardangervidda (Rv7) und Sognefjellet (Fv55) sind im Mai meist offen, können aber bei Schneefällen kurzfristig gesperrt werden. Bei Variante B unbedingt vor jedem Bergpass <a class="underline" href="https://www.vegvesen.no/trafikk/" target="_blank">vegvesen.no/trafikk</a> checken.
+  </p>
+</div>
+</section>
+
+<!-- ============== TAGESPLAN ============== -->
+<section id="tagesplan" class="max-w-6xl mx-auto px-5 py-14">
+  <h2 class="text-4xl md:text-5xl font-semibold text-fjordDark">Tagesplan (Variante A)</h2>
+  <p class="mt-3 text-ink/70 max-w-3xl">
+    Klick auf einen Tag für Details. Distanzen sind grobe Richtwerte; Stellplatz-Vorschläge sind Startpunkte für park4night/ACSI.
+  </p>
+
+  <ol class="timeline mt-8">
+
+    <li>
+      <details class="card p-5">
+        <summary class="flex items-baseline gap-3">
+          <span class="day-num text-3xl text-fjord">Tag&nbsp;0</span>
+          <span class="font-medium">Mi 13.05. — Camper holen &amp; beladen</span>
+          <span class="ml-auto text-xs text-ink/50 chev">▾</span>
+        </summary>
+        <div class="mt-3 text-sm text-ink/80 space-y-2">
+          <p><b>17:00 Abholung</b> Roadsurfer Duisburg, Forststr. 36 · Übergabe&nbsp;~45–60 min einplanen.</p>
+          <p><b>~17 km</b> nach Krefeld-Hüls → in Ruhe beladen, Inventar abgleichen, Strom/Wasser/Toilette einrichten.</p>
+          <p><b>Empfehlung:</b> 1. Nacht <i>nicht</i> mehr losfahren. Ausgeschlafen am Donnerstag früh starten ist entspannter und sicherer als Anreise im Dunkeln. Notfalls vor dem Haus / auf einem ruhigen Platz schlafen.</p>
+          <p><b>Alternative:</b> Wer fit ist, fährt 13. abends bis Bremen/Hamburg-Süd (~3:30 h) — dann ist Tag&nbsp;1 viel kürzer.</p>
+        </div>
+      </details>
+    </li>
+
+    <li>
+      <details class="card p-5" open>
+        <summary class="flex items-baseline gap-3">
+          <span class="day-num text-3xl text-fjord">Tag&nbsp;1</span>
+          <span class="font-medium">Do 14.05. — Krefeld → Lübeck/Travemünde</span>
+          <span class="ml-auto text-xs"><span class="chip chip-ink">~520&nbsp;km · 5:30&nbsp;h</span></span>
+        </summary>
+        <div class="mt-3 text-sm text-ink/80 space-y-2">
+          <p>Christi Himmelfahrt = Feiertag. Früh los (vor 7&nbsp;Uhr) hilft, der A2/A1-Karawane zu entgehen.</p>
+          <p><b>Stopp:</b> Lübeck Altstadt — Marzipan bei Niederegger, Holstentor, schnelles Mittag.</p>
+          <p><b>Übernachten:</b> Camping Travemünde Priwall (direkt an der Ostsee) oder Stellplatz Lübeck-Schönböcken. Erste Nacht nicht zu wild — Zeit, das Camper-Setup zu testen.</p>
+        </div>
+      </details>
+    </li>
+
+    <li>
+      <details class="card p-5">
+        <summary class="flex items-baseline gap-3">
+          <span class="day-num text-3xl text-fjord">Tag&nbsp;2</span>
+          <span class="font-medium">Fr 15.05. — Lübeck → Puttgarden Fähre → København</span>
+          <span class="ml-auto text-xs"><span class="chip chip-ink">~250&nbsp;km · 4&nbsp;h inkl. Fähre</span></span>
+        </summary>
+        <div class="mt-3 text-sm text-ink/80 space-y-2">
+          <p><b>Fähre Puttgarden→Rødby</b> Scandlines, 45 min, alle 30 min, keine Reservierung nötig (kann man, spart aber selten was). ~120&nbsp;€ einfach für Camper&nbsp;+ 2 Pers.</p>
+          <p><b>Ankunft Kopenhagen Nachmittag</b> — Auto auf Camping abstellen (Camping Charlottenlund Fort, am Strand, 15 min ins Zentrum mit Bus 23) und ab in die Stadt.</p>
+          <p><b>Abendprogramm:</b> Reffen Streetfood (Refshaleøen) oder einfach am Hafen treiben lassen.</p>
+        </div>
+      </details>
+    </li>
+
+    <li>
+      <details class="card p-5">
+        <summary class="flex items-baseline gap-3">
+          <span class="day-num text-3xl text-fjord">Tag&nbsp;3</span>
+          <span class="font-medium">Sa 16.05. — København</span>
+          <span class="ml-auto text-xs"><span class="chip chip-fjord">Stadttag</span></span>
+        </summary>
+        <div class="mt-3 text-sm text-ink/80 space-y-2">
+          <p><b>Vormittag:</b> Fahrräder leihen (Donkey Republic) oder zu Fuß: Nyhavn, Amalienborg, Marmorkirche, Kastellet.</p>
+          <p><b>Mittag:</b> Torvehallerne (Markthalle, Smørrebrød von Hallernes oder Suppe von Soupanatural).</p>
+          <p><b>Nachmittag:</b> Christianshavn, Christiania, Aufstieg zur Vor Frelsers Kirke (398 Stufen, irres Panorama).</p>
+          <p><b>Abend:</b> Manfreds (Jægersborggade) für ein <i>echtes</i> Abend-Highlight — Nachbarschaftsbistro, Naturwein, Reservierung empfohlen.</p>
+        </div>
+      </details>
+    </li>
+
+    <li>
+      <details class="card p-5">
+        <summary class="flex items-baseline gap-3">
+          <span class="day-num text-3xl text-fjord">Tag&nbsp;4</span>
+          <span class="font-medium">So 17.05. — København → Helsingør → Helsingborg → Göteborg</span>
+          <span class="ml-auto text-xs"><span class="chip chip-ink">~290&nbsp;km · 4&nbsp;h</span></span>
+        </summary>
+        <div class="mt-3 text-sm text-ink/80 space-y-2">
+          <p>17.&nbsp;Mai = norwegischer Nationalfeiertag — wir sind in SE, also egal. Aber: in Schweden ist Sonntag.</p>
+          <p><b>Fähre Helsingør→Helsingborg</b> ForSea/Sundbusserne, 20 min, alle 15 min, ~80&nbsp;€ einfach für Camper.</p>
+          <p>Alternative: Øresundsbron — fährt durch, aber teurer (~95&nbsp;€) und ohne Pause-Effekt.</p>
+          <p><b>Stopp:</b> Kullaberg (15 km nördlich Helsingborg) — Klippenwanderung, Robben, kostenfreies WC.</p>
+          <p><b>Übernachten:</b> Lisebergsbyn Kärralund Stadtcamping Göteborg <i>oder</i> Askims Strand Camping (ruhiger).</p>
+        </div>
+      </details>
+    </li>
+
+    <li>
+      <details class="card p-5">
+        <summary class="flex items-baseline gap-3">
+          <span class="day-num text-3xl text-fjord">Tag&nbsp;5</span>
+          <span class="font-medium">Mo 18.05. — Göteborg &amp; Bohuslän-Schären</span>
+          <span class="ml-auto text-xs"><span class="chip chip-fjord">Stadt + Küste</span></span>
+        </summary>
+        <div class="mt-3 text-sm text-ink/80 space-y-2">
+          <p><b>Vormittag:</b> Haga-Viertel — Café Husaren für die berühmten Haga-Bullar (XL-Zimtschnecken). Saluhallen Göteborg für Mittag-Picknick-Einkauf.</p>
+          <p><b>Nachmittag:</b> Ausflug nach <b>Marstrand</b> (45 min) — autofreie Schäreninsel, Festungsbesuch, Eisbad mutig optional.</p>
+          <p><b>Übernachten:</b> Stellplatz Marstrand-Koön <i>oder</i> Camping Lagunen.</p>
+        </div>
+      </details>
+    </li>
+
+    <li>
+      <details class="card p-5">
+        <summary class="flex items-baseline gap-3">
+          <span class="day-num text-3xl text-fjord">Tag&nbsp;6</span>
+          <span class="font-medium">Di 19.05. — Bohuslän → Smögen / Fjällbacka → Oslo</span>
+          <span class="ml-auto text-xs"><span class="chip chip-ink">~370&nbsp;km · 5&nbsp;h</span></span>
+        </summary>
+        <div class="mt-3 text-sm text-ink/80 space-y-2">
+          <p><b>Stopp Smögen:</b> bunte Holzhäuser auf den Klippen, Fischbude für geräucherte Makrele.</p>
+          <p><b>Stopp Fjällbacka:</b> Bergsteigerin Camilla Läckberg-Krimi-Land. Vetteberget aufsteigen für Aussicht.</p>
+          <p>Grenzübertritt Svinesund → Norwegen. <b>Wichtig:</b> Spätestens hier <a class="underline" href="https://www.epcplc.com/" target="_blank">AutoPASS-Konto</a> aktiv haben.</p>
+          <p><b>Übernachten:</b> Bogstad Camping Oslo (am See, U-Bahn ins Zentrum).</p>
+        </div>
+      </details>
+    </li>
+
+    <li>
+      <details class="card p-5">
+        <summary class="flex items-baseline gap-3">
+          <span class="day-num text-3xl text-fjord">Tag&nbsp;7</span>
+          <span class="font-medium">Mi 20.05. — Oslo</span>
+          <span class="ml-auto text-xs"><span class="chip chip-fjord">Stadttag</span></span>
+        </summary>
+        <div class="mt-3 text-sm text-ink/80 space-y-2">
+          <p><b>Morgens:</b> Vigeland-Skulpturenpark (gratis, früh fast leer).</p>
+          <p><b>Mittag:</b> Mathallen (Markthalle, Vulkan-Viertel) — Vippa am Hafen ist die etwas wildere Streetfood-Variante.</p>
+          <p><b>Nachmittag:</b> Bygdøy mit der kleinen Fähre — Wahl zwischen Wikingerschiffmuseum (geplante Wiedereröffnung), Fram-Museum, Kon-Tiki-Museum.</p>
+          <p><b>Alternative bei Regen:</b> Munch-Museum (das neue, am Hafen) oder Nationalmuseum.</p>
+          <p><b>Abend:</b> Sauna mit Eisbad bei <i>Oslo Fjord Sauna</i> (Aker Brygge oder Sukkerbiten) — Bucht für 90 min vorab.</p>
+        </div>
+      </details>
+    </li>
+
+    <li>
+      <details class="card p-5">
+        <summary class="flex items-baseline gap-3">
+          <span class="day-num text-3xl text-fjord">Tag&nbsp;8</span>
+          <span class="font-medium">Do 21.05. — Oslo → Hardangervidda → Eidfjord</span>
+          <span class="ml-auto text-xs"><span class="chip chip-sunset">~340&nbsp;km · 5:30&nbsp;h</span></span>
+        </summary>
+        <div class="mt-3 text-sm text-ink/80 space-y-2">
+          <p>Einer der schönsten Tage. Über Drammen → Geilo → Rv7 quer über die Hardangervidda-Hochebene (Rentier-Land, Schnee bis weit in den Mai).</p>
+          <p><b>Pflicht-Stopp:</b> <b>Vøringsfossen</b> — neue Aussichtsbrücke, 182&nbsp;m freier Fall.</p>
+          <p>Abfahrt nach Eidfjord: extreme Kehren, langsam fahren. Ankunft am Hardangerfjord-Ende = visuelles Wow.</p>
+          <p><b>Übernachten:</b> Camping Eidfjord (am Wasser) oder Sæbø Camping (Ulvik, Apfelblüten-Region).</p>
+        </div>
+      </details>
+    </li>
+
+    <li>
+      <details class="card p-5">
+        <summary class="flex items-baseline gap-3">
+          <span class="day-num text-3xl text-fjord">Tag&nbsp;9</span>
+          <span class="font-medium">Fr 22.05. — Hardangerfjord → Bergen</span>
+          <span class="ml-auto text-xs"><span class="chip chip-ink">~150&nbsp;km · 3&nbsp;h + Stopps</span></span>
+        </summary>
+        <div class="mt-3 text-sm text-ink/80 space-y-2">
+          <p><b>Stopp:</b> Steinsdalsfossen (man läuft hinter dem Wasserfall durch).</p>
+          <p><b>Stopp:</b> Norheimsund — Hardangerfjord-Aussichten, Apfelmost-Verkostung bei Hardanger Saft &amp; Siderfabrikk.</p>
+          <p><b>Bergen Ankunft mittags.</b> Camper auf Camping Lone (~25 min ins Zentrum mit Bus 900) oder Bergen Camping Park abstellen.</p>
+          <p><b>Nachmittag:</b> Bryggen UNESCO-Holzhäuser, Fløibahn auf den Hausberg Fløyen.</p>
+          <p><b>Abend-Highlight:</b> <i>Lysverket</i> oder <i>Bare Vestland</i> — Restaurant-Highlight #1 (siehe „Städte &amp; Essen").</p>
+        </div>
+      </details>
+    </li>
+
+    <li>
+      <details class="card p-5">
+        <summary class="flex items-baseline gap-3">
+          <span class="day-num text-3xl text-fjord">Tag&nbsp;10</span>
+          <span class="font-medium">Sa 23.05. — Bergen voll</span>
+          <span class="ml-auto text-xs"><span class="chip chip-fjord">Stadttag</span></span>
+        </summary>
+        <div class="mt-3 text-sm text-ink/80 space-y-2">
+          <p><b>Vormittag:</b> Fischmarkt (touristisch teuer, aber ein Foto wert) — daneben Mathallen für die echte Auswahl.</p>
+          <p><b>Mittag:</b> Pingvinen (urige Bergen-Pub-Küche, Klippfisch, Lammfrikadellen).</p>
+          <p><b>Nachmittag:</b> KODE-Kunstmuseum (Munch-Sammlung) oder Wanderung Mt. Ulriken (Seilbahn hoch, zu Fuß zurück).</p>
+          <p><b>Abend:</b> Konzert in der Grieg-Halle? Programm vorab checken.</p>
+        </div>
+      </details>
+    </li>
+
+    <li>
+      <details class="card p-5">
+        <summary class="flex items-baseline gap-3">
+          <span class="day-num text-3xl text-fjord">Tag&nbsp;11</span>
+          <span class="font-medium">So 24.05. — Bergen → Hardangerfjord-Süd → Odda</span>
+          <span class="ml-auto text-xs"><span class="chip chip-ink">~180&nbsp;km · 4&nbsp;h</span></span>
+        </summary>
+        <div class="mt-3 text-sm text-ink/80 space-y-2">
+          <p>Pfingstsonntag — viele Geschäfte zu in NO. Vorräte morgens noch in Bergen aufstocken.</p>
+          <p>Über Tysse → Mundheim → Jondal-Fähre → Utne → Odda. Die Fähre über den Hardangerfjord ist Teil der Reise, nicht nur Logistik.</p>
+          <p><b>Übernachten:</b> Trolltunga Camping (Tyssedal) <i>oder</i> Sandvinvatnet Camping. Wenn ihr Trolltunga laufen wollt: hier vorbereiten.</p>
+        </div>
+      </details>
+    </li>
+
+    <li>
+      <details class="card p-5">
+        <summary class="flex items-baseline gap-3">
+          <span class="day-num text-3xl text-fjord">Tag&nbsp;12</span>
+          <span class="font-medium">Mo 25.05. — Wandertag (Pfingstmontag)</span>
+          <span class="ml-auto text-xs"><span class="chip chip-sunset">Wandern</span></span>
+        </summary>
+        <div class="mt-3 text-sm text-ink/80 space-y-2">
+          <p><b>Option Voll-Hard:</b> Trolltunga (28&nbsp;km, 10–12 h, ~800&nbsp;Hm). Im Mai meist nur mit Guide empfohlen wegen Restschnee — vorab Wetter &amp; <a class="underline" href="https://www.trolltunga.com/" target="_blank">trolltunga.com</a> checken.</p>
+          <p><b>Option Mittel:</b> Buer-Gletscher Wanderung (5–6&nbsp;km hin/zurück, 250&nbsp;Hm).</p>
+          <p><b>Option Light:</b> Låtefossen (Doppel-Wasserfall direkt an der Straße) + Spaziergang am Sandvinvatnet.</p>
+        </div>
+      </details>
+    </li>
+
+    <li>
+      <details class="card p-5">
+        <summary class="flex items-baseline gap-3">
+          <span class="day-num text-3xl text-fjord">Tag&nbsp;13</span>
+          <span class="font-medium">Di 26.05. — Odda → Stavanger</span>
+          <span class="ml-auto text-xs"><span class="chip chip-ink">~250&nbsp;km · 5&nbsp;h + Fähre</span></span>
+        </summary>
+        <div class="mt-3 text-sm text-ink/80 space-y-2">
+          <p>Über Sauda → Saudasjøen Fähre? Nein, schöner: über Røldal &amp; Haukelifjell → Sand → Stavanger. Mehrere kleine Fähren möglich, AutoPASS aktiv lassen.</p>
+          <p><b>Stopp:</b> Røldal Stabkirche (kurz raus, fotografieren, weiter).</p>
+          <p><b>Übernachten:</b> Mosvangen Camping Stavanger (zentral) <i>oder</i> Preikestolen Basecamp (für Tag 14 strategischer).</p>
+        </div>
+      </details>
+    </li>
+
+    <li>
+      <details class="card p-5">
+        <summary class="flex items-baseline gap-3">
+          <span class="day-num text-3xl text-fjord">Tag&nbsp;14</span>
+          <span class="font-medium">Mi 27.05. — Preikestolen + Stavanger</span>
+          <span class="ml-auto text-xs"><span class="chip chip-sunset">Wandern + Stadt</span></span>
+        </summary>
+        <div class="mt-3 text-sm text-ink/80 space-y-2">
+          <p><b>Morgens 6:30 los</b> zum Parkplatz Preikestolen (250&nbsp;NOK Parkgebühr). Aufstieg 8&nbsp;km hin/zurück, 4&nbsp;h, 600&nbsp;Hm. Vor 7&nbsp;Uhr starten = leerer Felsen, schöneres Foto, Rückweg vor dem Großandrang.</p>
+          <p><b>Nachmittag:</b> Stavanger — Gamle Stavanger (alte weiße Holzhäuser), Färberviertel, Norsk Oljemuseum (überraschend interessant).</p>
+          <p><b>Abend:</b> Renaa Restauranthuset oder Fisketorget. Stavanger ist Foodie-Stadt — der zweite Restaurant-Highlight-Abend.</p>
+        </div>
+      </details>
+    </li>
+
+    <li>
+      <details class="card p-5">
+        <summary class="flex items-baseline gap-3">
+          <span class="day-num text-3xl text-fjord">Tag&nbsp;15</span>
+          <span class="font-medium">Do 28.05. — Stavanger → Kristiansand → Fähre Hirtshals → Skagen</span>
+          <span class="ml-auto text-xs"><span class="chip chip-sunset">~245&nbsp;km + Fähre</span></span>
+        </summary>
+        <div class="mt-3 text-sm text-ink/80 space-y-2">
+          <p>Frühstück, gemütlich los. Stavanger → Kristiansand ~3&nbsp;h auf der E39.</p>
+          <p><b>Fähre Color Line</b> Kristiansand → Hirtshals, ~3:15&nbsp;h. <b>Vorab buchen!</b> (oder spontan, je nach Auslastung). Camper + 2 Pers Mai 2026 ca. 180–230&nbsp;€.</p>
+          <p><b>Ankunft DK</b> ~spätnachmittags. Skagen Camping (10 min vom Hafen) — Sanddünen, das Zwei-Meere-Phänomen Grenen, Käse-Kringler im Bäcker.</p>
+        </div>
+      </details>
+    </li>
+
+    <li>
+      <details class="card p-5">
+        <summary class="flex items-baseline gap-3">
+          <span class="day-num text-3xl text-fjord">Tag&nbsp;16</span>
+          <span class="font-medium">Fr 29.05. — Skagen → Hamburg/Lüneburg-Region</span>
+          <span class="ml-auto text-xs"><span class="chip chip-ink">~580&nbsp;km · 7&nbsp;h</span></span>
+        </summary>
+        <div class="mt-3 text-sm text-ink/80 space-y-2">
+          <p>Letzter „echter" Reisetag. Frühstück Grenen (Sandzunge), dann lange Etappe Richtung DE.</p>
+          <p><b>Optionaler Stopp:</b> Aarhus für Mittag — Aarhus Street Food (am Bahnhof) ist perfekt für 90 Minuten Pause.</p>
+          <p><b>Übernachten:</b> Campingplatz im Sachsenwald oder Lüneburger Heide, je nachdem wie weit ihr kommt. Ziel: morgen früh nur noch ~4&nbsp;h zu fahren.</p>
+        </div>
+      </details>
+    </li>
+
+    <li>
+      <details class="card p-5">
+        <summary class="flex items-baseline gap-3">
+          <span class="day-num text-3xl text-fjord">Tag&nbsp;17</span>
+          <span class="font-medium">Sa 30.05. — Heim → Krefeld leerräumen → Duisburg 17:00</span>
+          <span class="ml-auto text-xs"><span class="chip chip-ink">~400&nbsp;km · 4&nbsp;h</span></span>
+        </summary>
+        <div class="mt-3 text-sm text-ink/80 space-y-2">
+          <p>Spätestens 7:30&nbsp;Uhr los. Tankstellen-Tipp: Gleicher Liter-Preis wie Abholung möglichst nah an Duisburg tanken (Mietvertrag-Pflicht: vollgetankt zurück).</p>
+          <p><b>~12:00:</b> Krefeld-Hüls. <b>2–3 h</b> realistisch zum Leerräumen, Müll wegbringen, Camper sauber wischen.</p>
+          <p><b>~15:30:</b> Letzte Tank-Fahrt direkt vor Duisburg.</p>
+          <p><b>~16:30 → 17:00:</b> Roadsurfer Forststr. 36 — Übergabe, fertig. 🌲</p>
+        </div>
+      </details>
+    </li>
+
+  </ol>
+</section>
+
+<!-- ============== PACKLISTE ============== -->
+<section id="packliste" class="bg-paper border-y border-dust">
+<div class="max-w-6xl mx-auto px-5 py-14">
+  <div class="flex flex-wrap items-end gap-4">
+    <div>
+      <h2 class="text-4xl md:text-5xl font-semibold text-fjordDark">Packliste</h2>
+      <p class="mt-3 text-ink/70 max-w-3xl">Hakt ab, was eingepackt ist. Status wird im Browser gespeichert (localStorage). „<b>Status zurücksetzen</b>" leert alle Häkchen.</p>
+    </div>
+    <div class="ml-auto flex flex-col items-end gap-2 no-print">
+      <div class="text-sm text-ink/70">Fortschritt: <span id="pack-count">0/0</span></div>
+      <div class="progress-track w-56"><div id="pack-progress" class="progress-fill" style="width:0%"></div></div>
+      <button onclick="resetPacking()" class="text-xs text-sunset underline">Status zurücksetzen</button>
+    </div>
+  </div>
+
+  <p class="mt-6 text-sm text-ink/70 max-w-3xl">
+    Roadsurfer-Standardausstattung (Geschirr, Töpfe, Bettwäsche, Tisch+Stühle, Gaskocher, Kühlschrank/-box) ist <i>nicht</i> hier gelistet — das prüfen wir bei der Übergabe. Markise, Standheizung und Toilette sind oft Add-Ons; <a class="underline text-fjord" href="https://rent-help.roadsurfer.com/hc/de/articles/360056714794-Welche-Ausstattung-bietet-mein-Camper" target="_blank">Roadsurfer-Liste hier</a>.
+  </p>
+
+  <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-5 check-list">
+
+    <div class="card p-5">
+      <h3 class="text-2xl text-fjord">Dokumente</h3>
+      <div class="mt-3 space-y-1">
+        <label><input type="checkbox" data-pack="doc1"><span>Personalausweise (reichen für DK/SE/NO)</span></label>
+        <label><input type="checkbox" data-pack="doc2"><span>Reisepässe (zur Sicherheit zusätzlich)</span></label>
+        <label><input type="checkbox" data-pack="doc3"><span>Führerscheine</span></label>
+        <label><input type="checkbox" data-pack="doc4"><span>Roadsurfer-Mietvertrag (digital + ausgedruckt)</span></label>
+        <label><input type="checkbox" data-pack="doc5"><span>Übergabeprotokoll (mit Foto-Doku)</span></label>
+        <label><input type="checkbox" data-pack="doc6"><span>Grüne Versicherungskarte</span></label>
+        <label><input type="checkbox" data-pack="doc7"><span>EHIC / Auslandskrankenversicherung</span></label>
+        <label><input type="checkbox" data-pack="doc8"><span>ADAC-Karte (oder anderer Pannenschutz)</span></label>
+        <label><input type="checkbox" data-pack="doc9"><span>Fähren-Buchungen (PDF, offline)</span></label>
+        <label><input type="checkbox" data-pack="doc10"><span>AutoPASS-Konto Norwegen aktiviert</span></label>
+        <label><input type="checkbox" data-pack="doc11"><span>BroBizz / EasyGo (DK Brücken, optional)</span></label>
+      </div>
+    </div>
+
+    <div class="card p-5">
+      <h3 class="text-2xl text-fjord">Bekleidung — Zwiebel-Prinzip</h3>
+      <div class="mt-3 space-y-1">
+        <label><input type="checkbox" data-pack="cl1"><span>Hardshell-Regenjacke (PFLICHT — Bergen ist Bergen)</span></label>
+        <label><input type="checkbox" data-pack="cl2"><span>Regenhose oder dichtes Beinkleid</span></label>
+        <label><input type="checkbox" data-pack="cl3"><span>Daunen-/Primaloft-Jacke</span></label>
+        <label><input type="checkbox" data-pack="cl4"><span>Fleece oder Pullover (2x)</span></label>
+        <label><input type="checkbox" data-pack="cl5"><span>Merino-Longsleeves (2x — funktional, riecht nicht)</span></label>
+        <label><input type="checkbox" data-pack="cl6"><span>T-Shirts (4–5x)</span></label>
+        <label><input type="checkbox" data-pack="cl7"><span>Wanderhose, schnelltrocknend</span></label>
+        <label><input type="checkbox" data-pack="cl8"><span>Jeans / Stadthose</span></label>
+        <label><input type="checkbox" data-pack="cl9"><span>Wanderschuhe (eingelaufen!)</span></label>
+        <label><input type="checkbox" data-pack="cl10"><span>Bequeme Schuhe für Stadt</span></label>
+        <label><input type="checkbox" data-pack="cl11"><span>Sandalen / Crocs (Camping/Dusche)</span></label>
+        <label><input type="checkbox" data-pack="cl12"><span>Mütze, Schal, dünne Handschuhe</span></label>
+        <label><input type="checkbox" data-pack="cl13"><span>Sonnenbrille (Mai = lange Tage, blendendes Licht)</span></label>
+        <label><input type="checkbox" data-pack="cl14"><span>Badesachen + Mikrofasertuch (Sauna!)</span></label>
+        <label><input type="checkbox" data-pack="cl15"><span>Schlaf-Outfit / warme Socken</span></label>
+        <label><input type="checkbox" data-pack="cl16"><span>Unterwäsche, Socken (je 7x)</span></label>
+      </div>
+    </div>
+
+    <div class="card p-5">
+      <h3 class="text-2xl text-fjord">Wandern &amp; Outdoor</h3>
+      <div class="mt-3 space-y-1">
+        <label><input type="checkbox" data-pack="ou1"><span>Tagesrucksäcke (20–25 L, je 1)</span></label>
+        <label><input type="checkbox" data-pack="ou2"><span>Trinkflasche / Thermo (2x)</span></label>
+        <label><input type="checkbox" data-pack="ou3"><span>Stirnlampe + Ersatzbatterien</span></label>
+        <label><input type="checkbox" data-pack="ou4"><span>Wanderstöcke (für Preikestolen / Trolltunga)</span></label>
+        <label><input type="checkbox" data-pack="ou5"><span>Picknick-Decke</span></label>
+        <label><input type="checkbox" data-pack="ou6"><span>Powerbank (10 000 mAh+)</span></label>
+        <label><input type="checkbox" data-pack="ou7"><span>Mücken-Spray (DEET, ab Mitte Mai relevant)</span></label>
+        <label><input type="checkbox" data-pack="ou8"><span>Zecken-Pinzette</span></label>
+        <label><input type="checkbox" data-pack="ou9"><span>Sonnencreme (LSF 30+)</span></label>
+        <label><input type="checkbox" data-pack="ou10"><span>Erste-Hilfe-Set (Blasenpflaster!)</span></label>
+        <label><input type="checkbox" data-pack="ou11"><span>Schweizer Messer / Multitool</span></label>
+        <label><input type="checkbox" data-pack="ou12"><span>Müllbeutel (für Wäsche, Müll, nasse Schuhe)</span></label>
+      </div>
+    </div>
+
+    <div class="card p-5">
+      <h3 class="text-2xl text-fjord">Küche extra</h3>
+      <div class="mt-3 space-y-1">
+        <label><input type="checkbox" data-pack="k1"><span>Salz, Pfeffer, Olivenöl, Essig</span></label>
+        <label><input type="checkbox" data-pack="k2"><span>Gewürz-Set (Paprika, Kurkuma, Curry, Oregano)</span></label>
+        <label><input type="checkbox" data-pack="k3"><span>Knoblauch, Zwiebeln (paar Stück)</span></label>
+        <label><input type="checkbox" data-pack="k4"><span>Kaffee (Bohnen / Pulver) + Filter</span></label>
+        <label><input type="checkbox" data-pack="k5"><span>Tee-Beutel</span></label>
+        <label><input type="checkbox" data-pack="k6"><span>Pasta, Reis, Couscous, Haferflocken</span></label>
+        <label><input type="checkbox" data-pack="k7"><span>Konserven (Tomaten, Kichererbsen, Thunfisch — 4–5 Stück)</span></label>
+        <label><input type="checkbox" data-pack="k8"><span>Müsli-Riegel (für Wandertage)</span></label>
+        <label><input type="checkbox" data-pack="k9"><span>Aluschalen / Frischhaltefolie / Gefrierbeutel</span></label>
+        <label><input type="checkbox" data-pack="k10"><span>Spülmittel (Bio, sparsam) + Schwämme</span></label>
+        <label><input type="checkbox" data-pack="k11"><span>Geschirrtuch (2x)</span></label>
+        <label><input type="checkbox" data-pack="k12"><span>French Press / AeroPress (wenn Roadsurfer keine hat)</span></label>
+        <label><input type="checkbox" data-pack="k13"><span>Wasserkanister-Reserve (5 L für Notfall)</span></label>
+      </div>
+    </div>
+
+    <div class="card p-5">
+      <h3 class="text-2xl text-fjord">Camper / Auto</h3>
+      <div class="mt-3 space-y-1">
+        <label><input type="checkbox" data-pack="ca1"><span>Warnwesten — <b>2 Stück</b> (NO-Pflicht für ALLE Insassen)</span></label>
+        <label><input type="checkbox" data-pack="ca2"><span>Warndreieck (sollte im Camper sein, prüfen)</span></label>
+        <label><input type="checkbox" data-pack="ca3"><span>Erste-Hilfe-Kasten (im Camper, prüfen)</span></label>
+        <label><input type="checkbox" data-pack="ca4"><span>Ersatzbirnen-Set</span></label>
+        <label><input type="checkbox" data-pack="ca5"><span>Eiskratzer + Frostschutz (Mai-Bergpässe!)</span></label>
+        <label><input type="checkbox" data-pack="ca6"><span>Spanngurte / Gummi-Expander</span></label>
+        <label><input type="checkbox" data-pack="ca7"><span>Auffahrkeile (oft im Camper, prüfen)</span></label>
+        <label><input type="checkbox" data-pack="ca8"><span>CEE-Adapter Camping → Schuko (im Camper, prüfen!)</span></label>
+        <label><input type="checkbox" data-pack="ca9"><span>Wasserschlauch (im Camper, prüfen)</span></label>
+        <label><input type="checkbox" data-pack="ca10"><span>Klopapier-Reserve + Toilettenchemie (wenn Toilette gebucht)</span></label>
+        <label><input type="checkbox" data-pack="ca11"><span>Mikrofaser-Tuch (Beschlag, Reinigung)</span></label>
+        <label><input type="checkbox" data-pack="ca12"><span>Putz-Set für Rückgabe (Lappen, Allzweckreiniger)</span></label>
+      </div>
+    </div>
+
+    <div class="card p-5">
+      <h3 class="text-2xl text-fjord">Tech &amp; Elektrik</h3>
+      <div class="mt-3 space-y-1">
+        <label><input type="checkbox" data-pack="te1"><span>Handys + Ladekabel</span></label>
+        <label><input type="checkbox" data-pack="te2"><span>USB-Doppellader (12V Adapter Auto)</span></label>
+        <label><input type="checkbox" data-pack="te3"><span>Kamera + SD-Karten + Ladegerät</span></label>
+        <label><input type="checkbox" data-pack="te4"><span>Mehrfachsteckdose</span></label>
+        <label><input type="checkbox" data-pack="te5"><span>Bluetooth-Lautsprecher (klein)</span></label>
+        <label><input type="checkbox" data-pack="te6"><span>Offline-Karten Norwegen + Schweden (Maps.me / Google offline)</span></label>
+        <label><input type="checkbox" data-pack="te7"><span>EU-Roaming aktiv (in NO oft <b>kein</b> EU-Tarif → vorab DKB/Telekom prüfen)</span></label>
+        <label><input type="checkbox" data-pack="te8"><span>Spotify-Playlist Skandi 2026 (oder Hörbücher)</span></label>
+      </div>
+    </div>
+
+    <div class="card p-5">
+      <h3 class="text-2xl text-fjord">Toiletry &amp; Hygiene</h3>
+      <div class="mt-3 space-y-1">
+        <label><input type="checkbox" data-pack="hy1"><span>Zahnbürste, Zahnpasta, Zahnseide</span></label>
+        <label><input type="checkbox" data-pack="hy2"><span>Shampoo / Duschgel (Bio, Natur-zerlegbar)</span></label>
+        <label><input type="checkbox" data-pack="hy3"><span>Deo, Bodylotion, Lippenpflege</span></label>
+        <label><input type="checkbox" data-pack="hy4"><span>Rasierzeug, Haarbürste</span></label>
+        <label><input type="checkbox" data-pack="hy5"><span>Persönliche Medikamente (Ibu, Imodium, Antihistamin, …)</span></label>
+        <label><input type="checkbox" data-pack="hy6"><span>Reisehandtücher (Mikrofaser, schnell trocknend)</span></label>
+        <label><input type="checkbox" data-pack="hy7"><span>Klopapier-Notreserve</span></label>
+        <label><input type="checkbox" data-pack="hy8"><span>Damenhygiene-Produkte</span></label>
+        <label><input type="checkbox" data-pack="hy9"><span>Ohrstöpsel, Schlafmaske (Mai-Nächte sind hell!)</span></label>
+      </div>
+    </div>
+
+    <div class="card p-5">
+      <h3 class="text-2xl text-fjord">Geld &amp; Zahlen</h3>
+      <div class="mt-3 space-y-1">
+        <label><input type="checkbox" data-pack="g1"><span>2 Kreditkarten (Visa &amp; Mastercard, fee-free)</span></label>
+        <label><input type="checkbox" data-pack="g2"><span>EC-Karte als Backup</span></label>
+        <label><input type="checkbox" data-pack="g3"><span>50–100 € in DKK (Notgroschen Bargeld)</span></label>
+        <label><input type="checkbox" data-pack="g4"><span>50 € in NOK (manche Pässe-Boxen wollen Münzen)</span></label>
+        <label><input type="checkbox" data-pack="g5"><span>Apple/Google Pay aktiv</span></label>
+        <label><input type="checkbox" data-pack="g6"><span>SEK <i>nicht</i> nötig — Schweden ist Karten-Land</span></label>
+      </div>
+    </div>
+
+    <div class="card p-5">
+      <h3 class="text-2xl text-fjord">Apps vor der Reise</h3>
+      <div class="mt-3 space-y-1">
+        <label><input type="checkbox" data-pack="a1"><span>park4night (Stell- &amp; Wildplätze, kostenpflichtig &lt;10€)</span></label>
+        <label><input type="checkbox" data-pack="a2"><span>ACSI Camping (CampingCard für 50% Rabatt Vor/Nachsaison)</span></label>
+        <label><input type="checkbox" data-pack="a3"><span>Yr.no (NO-Wetter, das beste der Welt)</span></label>
+        <label><input type="checkbox" data-pack="a4"><span>DMI (DK-Wetter), SMHI (SE-Wetter)</span></label>
+        <label><input type="checkbox" data-pack="a5"><span>Google Maps offline-Karten gespeichert</span></label>
+        <label><input type="checkbox" data-pack="a6"><span>Vegvesen Trafikk (NO-Straßenwarnungen)</span></label>
+        <label><input type="checkbox" data-pack="a7"><span>FerryGoGo / Color Line / Stena Line Apps</span></label>
+        <label><input type="checkbox" data-pack="a8"><span>NorgesGruppen / Coop Mat (NO-Supermarktketten)</span></label>
+        <label><input type="checkbox" data-pack="a9"><span>Hiking: AllTrails (Premium 7-Tage-Trial)</span></label>
+      </div>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<!-- ============== CAMPING ============== -->
+<section id="camping" class="max-w-6xl mx-auto px-5 py-14">
+  <h2 class="text-4xl md:text-5xl font-semibold text-fjordDark">Camping in Skandinavien</h2>
+  <p class="mt-3 text-ink/70 max-w-3xl">Drei Länder, drei Spielregeln. Kurz: in DK strenger, in SE/NO entspannter — aber überall mit Manieren.</p>
+
+  <div class="mt-8 grid md:grid-cols-3 gap-5">
+    <div class="card p-6">
+      <h3 class="text-2xl text-fjord">🇩🇰 Dänemark</h3>
+      <ul class="mt-3 text-sm space-y-2 text-ink/80 list-disc pl-5">
+        <li>Wildcampen mit Camper <b>verboten</b>. Übernachten nur auf Stell- oder Campingplätzen.</li>
+        <li>„Naturligvis"-Plätze: günstige, naturnahe Plätze ohne Strom (~15–20 €).</li>
+        <li>Stellplätze („Pladser") oft direkt am Hafen — sehr beliebt im Sommer, im Mai meist Platz.</li>
+        <li>Storebæltsbroen ~280–360&nbsp;DKK, Øresundsbron ~660&nbsp;DKK (Camper). Helsingør→Helsingborg-Fähre günstiger als Brücke und macht Pause.</li>
+      </ul>
+    </div>
+
+    <div class="card p-6">
+      <h3 class="text-2xl text-fjord">🇸🇪 Schweden</h3>
+      <ul class="mt-3 text-sm space-y-2 text-ink/80 list-disc pl-5">
+        <li><b>Allemansrätten:</b> 1 Nacht abseits ist erlaubt, sofern man nicht stört, nicht schadet und 70&nbsp;m Abstand zu Wohngebäuden hält.</li>
+        <li>Mit dem Camper ist „abseits" <i>im Auto schlafen</i> auf erlaubten Parkplätzen meist OK — Tisch+Stühle aufstellen ist <i>kein</i> Allemansrätten mehr.</li>
+        <li>Nationalparks: Aufenthalt ja, Camper-Übernachtung meist nein.</li>
+        <li>Maut: keine Vignette, aber Stockholm/Göteborg haben automatische Innenstadt-Maut (Tutzing-System; Kosten kommen Monate später per Brief — schnell zahlen!).</li>
+      </ul>
+    </div>
+
+    <div class="card p-6">
+      <h3 class="text-2xl text-fjord">🇳🇴 Norwegen</h3>
+      <ul class="mt-3 text-sm space-y-2 text-ink/80 list-disc pl-5">
+        <li><b>Allemannsretten</b> ähnlich SE — aber mit Auto/Camper nur auf öffentlichen Parkplätzen oder explizit erlaubten Plätzen.</li>
+        <li>An vielen Fjord-Aussichtspunkten: ausdrückliche „Bobil"-Verbote — bitte respektieren, sonst Geldstrafen 1500&nbsp;NOK+.</li>
+        <li><b>AutoPASS:</b> vorab über <a class="underline text-fjord" href="https://www.epcplc.com/" target="_blank">epcplc.com</a> registrieren; sonst kommt die Rechnung 3–6 Monate später per Post (mit Aufschlag).</li>
+        <li>Fähren: viele kleine Auto-Fähren am Fjord (Jondal, Hellesylt, Lavik…). Kosten ~150–350&nbsp;NOK pro Strecke, automatisch via AutoPASS.</li>
+        <li>Strom auf Camping: 3-poliger CEE-Adapter passt — Roadsurfer hat den i.d.R. dabei.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="mt-8 card p-6">
+    <h3 class="text-2xl text-fjord">Empfohlene Stellplätze entlang der Route</h3>
+    <div class="mt-4 grid md:grid-cols-2 gap-x-8 gap-y-1 text-sm text-ink/85">
+      <ul class="space-y-1 list-disc pl-5">
+        <li><b>Travemünde Priwall</b> — Ostsee, sauber, kurze Wege</li>
+        <li><b>Camping Charlottenlund Fort</b> (Kopenhagen) — Festungsanlage am Strand</li>
+        <li><b>Lisebergsbyn Kärralund</b> (Göteborg) — Trambahn ins Zentrum</li>
+        <li><b>Marstrand Koön Stellplatz</b> — Schäreninsel, autofrei</li>
+        <li><b>Bogstad Camping</b> (Oslo) — Wald, See, Metro nahe</li>
+      </ul>
+      <ul class="space-y-1 list-disc pl-5">
+        <li><b>Camping Eidfjord</b> — Hardangerfjord-Ende</li>
+        <li><b>Bergen Camping Park</b> — pragmatisch, Bus 900</li>
+        <li><b>Trolltunga Camping</b> (Tyssedal) — Wanderbasis</li>
+        <li><b>Mosvangen Camping</b> (Stavanger) — zentral</li>
+        <li><b>Skagen Camping Grenen</b> — Sanddünen, Bäcker um die Ecke</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============== STÄDTE & ESSEN ============== -->
+<section id="staedte" class="bg-paper border-y border-dust">
+<div class="max-w-6xl mx-auto px-5 py-14">
+  <h2 class="text-4xl md:text-5xl font-semibold text-fjordDark">Städte &amp; Essen</h2>
+  <p class="mt-3 text-ink/70 max-w-3xl">Pro Stadt: Highlights, ein Markthallen-/Streetfood-Tipp (perfekt zum Camper-Selbstkochen-Aufladen) und 1–2 Restaurant-Empfehlungen — günstig bis mittelpreisig, plus jeweils ein „Highlight-Abend" für die zwei geplanten Restaurant-Spitzen.</p>
+
+  <div class="mt-8 grid md:grid-cols-2 gap-5">
+
+    <article class="card p-6">
+      <div class="flex items-baseline gap-2"><h3 class="text-3xl text-fjord">Kopenhagen</h3><span class="chip chip-ink">Tag 2–3</span></div>
+      <p class="text-sm mt-2 text-ink/70 italic">Hyggelig, fahrradverrückt, voll Naturwein.</p>
+      <h4 class="mt-4 font-semibold">Sehen &amp; Erleben</h4>
+      <ul class="mt-1 text-sm space-y-1 list-disc pl-5 text-ink/80">
+        <li>Nyhavn, Amalienborg, Marmorkirche, Kastellet</li>
+        <li>Christiania &amp; Vor Frelsers Kirke (Spiral-Turm)</li>
+        <li>Fahrrad-Rundtour: Fælledparken → Superkilen → Refshaleøen</li>
+      </ul>
+      <h4 class="mt-4 font-semibold">Essen</h4>
+      <ul class="mt-1 text-sm space-y-1 list-disc pl-5 text-ink/80">
+        <li><b>Torvehallerne</b> — Markthalle, Smørrebrød bei Hallernes</li>
+        <li><b>Reffen</b> (Refshaleøen) — Streetfood am Wasser, von Tacos bis dänischer Hot Dog</li>
+        <li><b>Hija de Sanchez</b> — wahrscheinlich die besten Tacos Skandinaviens</li>
+        <li>⭐ <b>Manfreds</b> (Jægersborggade) — Highlight-Abend, Naturwein, Reservierung empfohlen</li>
+      </ul>
+    </article>
+
+    <article class="card p-6">
+      <div class="flex items-baseline gap-2"><h3 class="text-3xl text-fjord">Göteborg</h3><span class="chip chip-ink">Tag 5</span></div>
+      <p class="text-sm mt-2 text-ink/70 italic">Schwedens entspannte Schwester. Schären, Zimt, Werften.</p>
+      <h4 class="mt-4 font-semibold">Sehen &amp; Erleben</h4>
+      <ul class="mt-1 text-sm space-y-1 list-disc pl-5 text-ink/80">
+        <li>Haga-Viertel (Holzhäuser, Boutiquen, beste Zimtschnecken)</li>
+        <li>Slottsskogen-Park, Botanischer Garten</li>
+        <li>Tagesausflug Marstrand oder südliche Schären (Saltholmen → Brännö-Fähre)</li>
+      </ul>
+      <h4 class="mt-4 font-semibold">Essen</h4>
+      <ul class="mt-1 text-sm space-y-1 list-disc pl-5 text-ink/80">
+        <li><b>Saluhallen</b> (am Kungstorget) — Markthalle, Lunch-Spots</li>
+        <li><b>Café Husaren</b> — die berühmten XL-Haga-Bullar</li>
+        <li><b>Feskekôrka</b> („Fischkirche") — neu renoviert, perfekt für Mittag</li>
+        <li><b>Magnus &amp; Magnus</b> — moderne Bistro-Küche, fair</li>
+      </ul>
+    </article>
+
+    <article class="card p-6">
+      <div class="flex items-baseline gap-2"><h3 class="text-3xl text-fjord">Oslo</h3><span class="chip chip-ink">Tag 7</span></div>
+      <p class="text-sm mt-2 text-ink/70 italic">Holz, Stahl, Fjord — und immer Sauna in der Nähe.</p>
+      <h4 class="mt-4 font-semibold">Sehen &amp; Erleben</h4>
+      <ul class="mt-1 text-sm space-y-1 list-disc pl-5 text-ink/80">
+        <li>Vigeland-Park (gratis), Frognerparken</li>
+        <li>Bygdøy: Wikingerschiffmuseum (oder Fram/Kon-Tiki)</li>
+        <li>Munch-Museum, Opera (aufs Dach laufen!)</li>
+        <li>Sauna mit Fjord-Sprung: Oslo Fjord Sauna / KOK</li>
+      </ul>
+      <h4 class="mt-4 font-semibold">Essen</h4>
+      <ul class="mt-1 text-sm space-y-1 list-disc pl-5 text-ink/80">
+        <li><b>Mathallen</b> (Vulkan) — Markthalle, Pizza, Käse, Fisch</li>
+        <li><b>Vippa</b> — Streetfood-Halle am Hafen, ehemaliges Hafenlager</li>
+        <li><b>Pjoltergeist</b> — kleine, kreative Küche, faire Preise</li>
+        <li>Fine-Dining-Mention: <b>Maaemo</b> (3*) für Sterne-Verrückte mit gutem Konto</li>
+      </ul>
+    </article>
+
+    <article class="card p-6">
+      <div class="flex items-baseline gap-2"><h3 class="text-3xl text-fjord">Bergen</h3><span class="chip chip-sunset">Tag 9–10</span></div>
+      <p class="text-sm mt-2 text-ink/70 italic">Holz, Regen, Gewürz-Lager und Fjord-Tor.</p>
+      <h4 class="mt-4 font-semibold">Sehen &amp; Erleben</h4>
+      <ul class="mt-1 text-sm space-y-1 list-disc pl-5 text-ink/80">
+        <li>Bryggen UNESCO-Hansegassen</li>
+        <li>Fløibahn → Fløyen (Hausberg, Aussicht, Wandermöglichkeiten)</li>
+        <li>KODE-Kunstmuseen (Munch-Sammlung!)</li>
+        <li>Mt. Ulriken (höher als Fløyen, mit Seilbahn)</li>
+      </ul>
+      <h4 class="mt-4 font-semibold">Essen</h4>
+      <ul class="mt-1 text-sm space-y-1 list-disc pl-5 text-ink/80">
+        <li><b>Mathallen Bergen</b> — frischer Fisch, weniger touristisch als der Fischmarkt</li>
+        <li><b>Pingvinen</b> — ehrliche Westkost-Küche (Klippfisch, Lammfrikadellen)</li>
+        <li><b>Bare Vestland</b> — moderne West-Norwegen-Küche, fair</li>
+        <li>⭐ <b>Lysverket</b> — Highlight-Abend #1: Restaurant in der ehemaligen Stromzentrale, Bergen-Foodszene</li>
+      </ul>
+    </article>
+
+    <article class="card p-6">
+      <div class="flex items-baseline gap-2"><h3 class="text-3xl text-fjord">Stavanger</h3><span class="chip chip-sunset">Tag 13–14</span></div>
+      <p class="text-sm mt-2 text-ink/70 italic">Klein, weiß, kulinarisch.</p>
+      <h4 class="mt-4 font-semibold">Sehen &amp; Erleben</h4>
+      <ul class="mt-1 text-sm space-y-1 list-disc pl-5 text-ink/80">
+        <li>Gamle Stavanger (alte weiße Holzhäuser)</li>
+        <li>Färberviertel mit den bunten Fassaden (Øvre Holmegate)</li>
+        <li>Norsk Oljemuseum (überraschend gut, modern, ehrlich)</li>
+        <li>Preikestolen-Wanderung (siehe Tag 14)</li>
+      </ul>
+      <h4 class="mt-4 font-semibold">Essen</h4>
+      <ul class="mt-1 text-sm space-y-1 list-disc pl-5 text-ink/80">
+        <li><b>Fisketorget</b> — Fisch-Bistro mitten im Hafen, Mittag</li>
+        <li><b>Sabi Omakase</b> (1*) — kleine Sushi-Bar, früh reservieren</li>
+        <li>⭐ <b>Renaa Restauranthuset</b> — Highlight-Abend #2: regionale norwegische Spitzenküche</li>
+      </ul>
+    </article>
+
+    <article class="card p-6">
+      <div class="flex items-baseline gap-2"><h3 class="text-3xl text-fjord">Skagen / Aarhus</h3><span class="chip chip-ink">Tag 15–16</span></div>
+      <p class="text-sm mt-2 text-ink/70 italic">Nordstrand-Atmosphäre, dann ein letzter Stadtbummel.</p>
+      <h4 class="mt-4 font-semibold">Sehen &amp; Erleben</h4>
+      <ul class="mt-1 text-sm space-y-1 list-disc pl-5 text-ink/80">
+        <li>Grenen — wo zwei Meere zusammenstoßen, weiß-rotes Licht</li>
+        <li>Skagen-Maler im Skagens Museum</li>
+        <li>Aarhus: Latinerkvarter, ARoS Museum mit dem Regenbogen-Panorama</li>
+      </ul>
+      <h4 class="mt-4 font-semibold">Essen</h4>
+      <ul class="mt-1 text-sm space-y-1 list-disc pl-5 text-ink/80">
+        <li><b>Ruth's Hotel Bakery</b> Skagen — Frühstück</li>
+        <li><b>Aarhus Street Food</b> — Markthalle, perfekter Mittagsstopp</li>
+        <li><b>Café Smagløs</b> Aarhus — günstig, schwedisch-dänisch</li>
+      </ul>
+    </article>
+
+  </div>
+</div>
+</section>
+
+<!-- ============== TIPPS ============== -->
+<section id="tipps" class="max-w-6xl mx-auto px-5 py-14">
+  <h2 class="text-4xl md:text-5xl font-semibold text-fjordDark">Praktische Tipps</h2>
+
+  <div class="mt-8 grid md:grid-cols-2 gap-5">
+
+    <div class="card p-6">
+      <h3 class="text-2xl text-fjord">Maut, Brücken &amp; Fähren</h3>
+      <ul class="mt-3 text-sm space-y-2 text-ink/85 list-disc pl-5">
+        <li><b>Storebæltsbroen</b> (Sjælland↔Fyn): ~280–360 DKK Camper. Vorab online buchen spart Zeit.</li>
+        <li><b>Øresundsbron</b> (DK↔SE): ~660 DKK Camper. <i>Tipp:</i> Lieber Helsingør→Helsingborg-Fähre nehmen — günstiger und Pause.</li>
+        <li><b>Norwegen AutoPASS</b>: vor Reise <a class="underline" href="https://www.epcplc.com/" target="_blank">epcplc.com</a> registrieren. Spart Faktor 1,5 vs. Brief-Rechnung.</li>
+        <li><b>Fähre Kristiansand→Hirtshals</b> (Color Line): ~3:15 h, ~180–230 € Mai. Vorab buchen.</li>
+        <li><b>Fjord-Auto-Fähren</b> (NO): viele kleine Strecken, fahren häufig, AutoPASS automatisch.</li>
+      </ul>
+    </div>
+
+    <div class="card p-6">
+      <h3 class="text-2xl text-fjord">Geld &amp; Bezahlen</h3>
+      <ul class="mt-3 text-sm space-y-2 text-ink/85 list-disc pl-5">
+        <li>Skandinavien ist <b>fast cashless</b>. Kreditkarte (kontaktlos / Apple/Google Pay) reicht 95% der Fälle.</li>
+        <li>3 Währungen: <b>DKK, SEK, NOK</b> — alle nicht 1:1. Achten auf Wechselkurs in der Bank-App.</li>
+        <li>Empfehlenswerte Karten ohne Auslandsgebühren: <b>DKB Visa</b>, <b>N26</b>, <b>Revolut</b>.</li>
+        <li>Für NO-Toiletten/Brücken/Eintrittskästen: ~50 € in NOK Münzen Notgroschen.</li>
+        <li>Vinmonopolet: in NO gibt's Wein/Spirituosen <b>nur</b> dort (Mo–Fr bis 18, Sa bis 15). Bier in Supermärkten bis 20 Uhr.</li>
+      </ul>
+    </div>
+
+    <div class="card p-6">
+      <h3 class="text-2xl text-fjord">Mobilfunk &amp; Daten</h3>
+      <ul class="mt-3 text-sm space-y-2 text-ink/85 list-disc pl-5">
+        <li><b>DK + SE:</b> EU-Roaming = inkludiert.</li>
+        <li><b>NO:</b> ist <i>nicht</i> in der EU, aber meistens trotzdem in EU-Roaming-Tarifen enthalten — beim eigenen Anbieter prüfen!</li>
+        <li>Backup: eSIM (Airalo, Holafly) für 5–10 GB Skandinavien ~15–25 €.</li>
+        <li>Offline-Karten dringend laden — im Fjord ist 5G manchmal weg.</li>
+      </ul>
+    </div>
+
+    <div class="card p-6">
+      <h3 class="text-2xl text-fjord">Helle Nächte</h3>
+      <ul class="mt-3 text-sm space-y-2 text-ink/85 list-disc pl-5">
+        <li>Mitte Mai im Süd-Norwegen: Sonne von ~5:00 bis ~22:30, danach Dämmerung — nie wirklich stockdunkel.</li>
+        <li><b>Schlafmasken</b> sind keine Spielerei.</li>
+        <li>Vorteil: lange Wandertage möglich. Auch um 19 Uhr noch zum Wasserfall ist okay.</li>
+      </ul>
+    </div>
+
+    <div class="card p-6">
+      <h3 class="text-2xl text-fjord">Sprache</h3>
+      <ul class="mt-3 text-sm space-y-2 text-ink/85 list-disc pl-5">
+        <li>Englisch funktioniert <b>überall</b> einwandfrei. Deutsch bei Älteren in DK oft verstanden.</li>
+        <li>3 Höflichkeits-Wörter pro Sprache schaden nie:
+          <br/>DK: <i>Tak</i> (danke), <i>Hej</i> (hallo), <i>Skål</i>
+          <br/>SE: <i>Tack</i>, <i>Hej</i>, <i>Skål</i>
+          <br/>NO: <i>Takk</i>, <i>Hei</i>, <i>Skål</i>
+        </li>
+      </ul>
+    </div>
+
+    <div class="card p-6">
+      <h3 class="text-2xl text-fjord">Pfingsten-Besonderheit</h3>
+      <ul class="mt-3 text-sm space-y-2 text-ink/85 list-disc pl-5">
+        <li><b>17. Mai</b> = Norwegischer Nationalfeiertag (wir sind dann in SE — kein Effekt).</li>
+        <li><b>24./25.&nbsp;Mai</b> = Pfingstsonntag/-montag — viele NO-Geschäfte, Vinmonopolet und manche Tankstellen geschlossen. <b>Vorräte am 23. abends auffüllen.</b></li>
+        <li>Restaurants in Bergen/Stavanger: oft normal geöffnet, aber reservieren.</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============== WETTER ============== -->
+<section id="wetter" class="bg-paper border-y border-dust">
+<div class="max-w-6xl mx-auto px-5 py-14">
+  <h2 class="text-4xl md:text-5xl font-semibold text-fjordDark">Wetter im Mai</h2>
+  <p class="mt-3 text-ink/70 max-w-3xl">
+    Klimatologische Erwartung — keine echte Vorhersage (die kommt erst ab ~10 Tage vor Start). Mit dem Camper ist Wetter elastisch — der Fjord sieht im Regen sogar fjordiger aus.
+  </p>
+
+  <div class="mt-6 overflow-x-auto card">
+    <table class="w-full text-sm">
+      <thead class="bg-dust/60 text-left">
+        <tr>
+          <th class="p-3">Region</th>
+          <th class="p-3">Tag °C</th>
+          <th class="p-3">Nacht °C</th>
+          <th class="p-3">Regentage</th>
+          <th class="p-3">Sonnenstd/Tag</th>
+          <th class="p-3">Hinweis</th>
+        </tr>
+      </thead>
+      <tbody class="text-ink/85">
+        <tr class="border-t border-dust"><td class="p-3 font-medium">Kopenhagen</td><td class="p-3">10–17</td><td class="p-3">7–10</td><td class="p-3">~10</td><td class="p-3">7–8</td><td class="p-3">Mildes Frühlingswetter</td></tr>
+        <tr class="border-t border-dust"><td class="p-3 font-medium">Göteborg</td><td class="p-3">9–16</td><td class="p-3">5–9</td><td class="p-3">~10</td><td class="p-3">7</td><td class="p-3">Wind an der Küste</td></tr>
+        <tr class="border-t border-dust"><td class="p-3 font-medium">Oslo</td><td class="p-3">9–17</td><td class="p-3">5–9</td><td class="p-3">~9</td><td class="p-3">7</td><td class="p-3">Frühling, oft trockener als Bergen</td></tr>
+        <tr class="border-t border-dust"><td class="p-3 font-medium">Hardangervidda</td><td class="p-3">2–8</td><td class="p-3">−2 bis 3</td><td class="p-3">~12</td><td class="p-3">5</td><td class="p-3"><b>Schnee möglich</b>, Pässe checken</td></tr>
+        <tr class="border-t border-dust"><td class="p-3 font-medium">Bergen</td><td class="p-3">9–14</td><td class="p-3">6–9</td><td class="p-3"><b>~16</b></td><td class="p-3">5–6</td><td class="p-3">Regenhauptstadt EU. Akzeptieren.</td></tr>
+        <tr class="border-t border-dust"><td class="p-3 font-medium">Stavanger</td><td class="p-3">9–15</td><td class="p-3">6–9</td><td class="p-3">~13</td><td class="p-3">6</td><td class="p-3">Atlantik, wechselhaft</td></tr>
+        <tr class="border-t border-dust"><td class="p-3 font-medium">Skagen</td><td class="p-3">10–15</td><td class="p-3">7–10</td><td class="p-3">~9</td><td class="p-3">8</td><td class="p-3">Sehr hell, Wind</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="mt-4 text-sm text-ink/70">
+    Beste Wetter-Apps: <a class="underline text-fjord" href="https://www.yr.no/" target="_blank">yr.no</a> (NO, sehr genau, auch mit Niederschlagsradar), <a class="underline text-fjord" href="https://www.smhi.se/" target="_blank">SMHI</a> (SE), <a class="underline text-fjord" href="https://www.dmi.dk/" target="_blank">DMI</a> (DK). Für Bergpässe: <a class="underline text-fjord" href="https://www.vegvesen.no/trafikk/" target="_blank">vegvesen.no/trafikk</a>.
+  </p>
+</div>
+</section>
+
+<!-- ============== CHECK-IN/OUT ============== -->
+<section id="checklisten" class="max-w-6xl mx-auto px-5 py-14">
+  <h2 class="text-4xl md:text-5xl font-semibold text-fjordDark">Übergabe &amp; Rückgabe</h2>
+
+  <div class="mt-8 grid md:grid-cols-2 gap-5">
+    <div class="card p-6 check-list">
+      <h3 class="text-2xl text-fjord">Bei Abholung (Mi 13.05.)</h3>
+      <div class="mt-3 space-y-1">
+        <label><input type="checkbox" data-pack="ci1"><span>Camper komplett umrunden, jedes Detail filmen (Reifen, Lack, Dach)</span></label>
+        <label><input type="checkbox" data-pack="ci2"><span>Innenraum filmen — Polster, Schränke, Küche</span></label>
+        <label><input type="checkbox" data-pack="ci3"><span>Kilometerstand &amp; Tankfüllstand fotografieren</span></label>
+        <label><input type="checkbox" data-pack="ci4"><span>Übergabeprotokoll Punkt für Punkt durchgehen, Schäden eintragen</span></label>
+        <label><input type="checkbox" data-pack="ci5"><span>Ausstattung gegenchecken (Stühle, Tisch, Kocher, Adapter, Schlauch, Auffahrkeile, Toilettenchemie?)</span></label>
+        <label><input type="checkbox" data-pack="ci6"><span>Standheizung erklären lassen — wie an? Brennstoff?</span></label>
+        <label><input type="checkbox" data-pack="ci7"><span>Wasserbefüllung erklären lassen, Frisch- &amp; Grauwassertank</span></label>
+        <label><input type="checkbox" data-pack="ci8"><span>Notrufnummer Roadsurfer im Handy speichern</span></label>
+        <label><input type="checkbox" data-pack="ci9"><span>Versicherungs-Selbstbeteiligung &amp; Pannenhilfe-Klauseln klären</span></label>
+        <label><input type="checkbox" data-pack="ci10"><span>Tank halb? voll? — vor Übergabe-Foto Stand notieren</span></label>
+      </div>
+    </div>
+
+    <div class="card p-6 check-list">
+      <h3 class="text-2xl text-fjord">Vor Rückgabe (Sa 30.05.)</h3>
+      <div class="mt-3 space-y-1">
+        <label><input type="checkbox" data-pack="co1"><span>Volltanken (gleiche Sorte!) bevor Krefeld-Anfahrt</span></label>
+        <label><input type="checkbox" data-pack="co2"><span>Frischwassertank leer / Grauwasser an Entsorgungsstation</span></label>
+        <label><input type="checkbox" data-pack="co3"><span>Toilette komplett geleert &amp; gereinigt (wenn gemietet)</span></label>
+        <label><input type="checkbox" data-pack="co4"><span>Kühlbox/Kühlschrank leer, abgeschaltet, Tür offen</span></label>
+        <label><input type="checkbox" data-pack="co5"><span>Innenraum gesaugt &amp; gewischt (Krefeld-Hüls Etappe nutzen)</span></label>
+        <label><input type="checkbox" data-pack="co6"><span>Außen grobreinigen — vor allem Vorderscheibe, Scheinwerfer (Insekten)</span></label>
+        <label><input type="checkbox" data-pack="co7"><span>Bettwäsche zusammenfalten / abziehen wie vereinbart</span></label>
+        <label><input type="checkbox" data-pack="co8"><span>Müll komplett entfernt</span></label>
+        <label><input type="checkbox" data-pack="co9"><span>Persönliche Sachen — alle Schränke, Stauboxen, Dach!</span></label>
+        <label><input type="checkbox" data-pack="co10"><span>Schlüssel, Zubehör, Ladekabel komplett</span></label>
+        <label><input type="checkbox" data-pack="co11"><span>Foto vom finalen Übergabezustand</span></label>
+        <label><input type="checkbox" data-pack="co12"><span>Pufferzeit: 16:30 vor Ort sein → 17:00 Schlüsselübergabe</span></label>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-8 card p-6">
+    <h3 class="text-2xl text-fjord">Tag 0 + Tag 17 Logistik</h3>
+    <div class="grid md:grid-cols-2 gap-6 text-sm text-ink/85 mt-3">
+      <div>
+        <p class="font-semibold text-ink">Mi 13.05. nach Abholung:</p>
+        <ol class="mt-1 list-decimal pl-5 space-y-1">
+          <li>17:00 Übergabe Duisburg (45–60 min einplanen)</li>
+          <li>~18:30 Krefeld-Hüls — beladen (1.5–2 h)</li>
+          <li>Nacht in Krefeld-Hüls oder Anfahrt bis Lübeck-Region</li>
+        </ol>
+      </div>
+      <div>
+        <p class="font-semibold text-ink">Sa 30.05. vor Rückgabe:</p>
+        <ol class="mt-1 list-decimal pl-5 space-y-1">
+          <li>Spätestens 7:30 Hamburg-Region los</li>
+          <li>~12:00 Krefeld-Hüls (Mittagessen + Camper leer + putzen)</li>
+          <li>~15:30 Tankstelle nahe Duisburg</li>
+          <li>16:30–17:00 Roadsurfer Forststr. 36 Rückgabe</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FOOTER ============== -->
+<footer class="bg-fjordDark text-cream/95 py-10 mt-6">
+  <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-3 gap-8">
+    <div>
+      <h3 class="font-serif text-2xl">Notruf &amp; Wichtiges</h3>
+      <ul class="mt-3 text-sm space-y-1">
+        <li>🚨 Notruf DK/SE/NO: <b>112</b></li>
+        <li>🚗 Pannenhilfe ADAC: <b>+49 89 222 222</b></li>
+        <li>📞 Roadsurfer 24/7: in Mietvertrag</li>
+        <li>🇳🇴 Fjellredning (Bergrettung): <b>112</b></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="font-serif text-2xl">Schnell-Links</h3>
+      <ul class="mt-3 text-sm space-y-1">
+        <li><a class="underline" href="https://www.scandlines.de/" target="_blank">Scandlines (Puttgarden)</a></li>
+        <li><a class="underline" href="https://www.colorline.de/" target="_blank">Color Line (Kristiansand)</a></li>
+        <li><a class="underline" href="https://forsea.dk/" target="_blank">ForSea (Helsingør)</a></li>
+        <li><a class="underline" href="https://www.epcplc.com/" target="_blank">AutoPASS NO Anmeldung</a></li>
+        <li><a class="underline" href="https://www.vegvesen.no/trafikk/" target="_blank">vegvesen.no Verkehr/Pässe</a></li>
+        <li><a class="underline" href="https://www.yr.no/" target="_blank">yr.no Wetter</a></li>
+        <li><a class="underline" href="https://park4night.com/" target="_blank">park4night</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="font-serif text-2xl">Diese Seite</h3>
+      <p class="mt-3 text-sm leading-relaxed">
+        Selbst gehostet, keine Tracker, keine Cookies — nur localStorage für eure Häkchen.
+        Auf jedem Gerät neu öffnen ⇒ neue Häkchen.
+        Gemeinsam nutzen: Datei in iCloud/Dropbox, beide den Link öffnen.
+      </p>
+      <p class="mt-3 text-xs text-cream/70">Erstellt am 28.04.2026 · Stand: vor Reisebeginn</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Persistente Packliste via localStorage
+  const KEY = 'skandi2026-pack-v1';
+  const all = () => Array.from(document.querySelectorAll('input[type=checkbox][data-pack]'));
+  function loadState() {
+    let saved = {};
+    try { saved = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch(e){}
+    all().forEach(cb => { if (saved[cb.dataset.pack]) cb.checked = true; });
+    updateProgress();
+  }
+  function saveState() {
+    const out = {};
+    all().forEach(cb => { if (cb.checked) out[cb.dataset.pack] = 1; });
+    localStorage.setItem(KEY, JSON.stringify(out));
+  }
+  function updateProgress() {
+    const cbs = all();
+    const total = cbs.length;
+    const done = cbs.filter(c => c.checked).length;
+    const pct = total ? Math.round((done/total)*100) : 0;
+    const el = document.getElementById('pack-count');
+    const bar = document.getElementById('pack-progress');
+    if (el) el.textContent = done + '/' + total;
+    if (bar) bar.style.width = pct + '%';
+  }
+  function resetPacking() {
+    if (!confirm('Alle Häkchen löschen?')) return;
+    localStorage.removeItem(KEY);
+    all().forEach(cb => cb.checked = false);
+    updateProgress();
+  }
+  document.addEventListener('change', e => {
+    if (e.target.matches('input[type=checkbox][data-pack]')) {
+      saveState();
+      updateProgress();
+    }
+  });
+  document.addEventListener('DOMContentLoaded', loadState);
+
+  // Aktive Nav-Link Hervorhebung
+  const sections = ['uebersicht','route','tagesplan','packliste','camping','staedte','tipps','wetter','checklisten'];
+  const navs = sections.map(id => document.querySelector(`.nav-link[href="#${id}"]`));
+  function onScroll() {
+    let active = -1;
+    sections.forEach((id, i) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const top = el.getBoundingClientRect().top;
+      if (top < 120) active = i;
+    });
+    navs.forEach((n,i) => { if (n) n.classList.toggle('active', i === active); });
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+</script>
+</body>
+</html>
